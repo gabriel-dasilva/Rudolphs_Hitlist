@@ -15,7 +15,6 @@ CREATE TABLE hangouts (
 
 CREATE TABLE frequent_hangouts (
     hangout_id INT NOT NULL,
-	hangout_day varchar NOT NULL,
     hangout_time TIME NOT NULL,
     grad_id INT NOT NULL,
 
