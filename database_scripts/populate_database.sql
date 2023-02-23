@@ -34,6 +34,19 @@ VALUES (4,'Monday','18:00:00',1),
 (5,'Wednesday','19:00',3),
 (2,'Sunday','21:00',2);
 
+INSERT INTO lookup_grad_crimes (crime_description)
+VALUES ('Leaving laptop unlocked'),
+('Using tabs instead of spaces'),
+('Trash code');
+
+INSERT INTO committed_grad_crimes (grad_crime_id,hit_id)
+VALUES (1,1),
+(2,1),
+(3,3),
+(2,1),
+(2,2),
+(2,3);
+
 INSERT INTO hitlist (grad_id,murder_method_id,body_disposal_method_id,hit_completion_status)
 VALUES (1,6,3,'1'),
 (2,5,2,'0'),
