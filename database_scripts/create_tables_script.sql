@@ -57,14 +57,14 @@ CREATE TABLE lookup_grad_crimes (
     crime_description varchar(250) NOT NULL
 );
 
-CREATE TABLE commited_grad_crimes (
-    commited_grad_crime_id INT PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
+CREATE TABLE committed_grad_crimes (
+    committed_grad_crime_id INT PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
     grad_crime_id INT NOT NULL,
     hit_id INT NOT NULL,
 
-    CONSTRAINT FK_commited_grad_crimes_hitlist FOREIGN KEY (hit_id)
+    CONSTRAINT FK_committed_grad_crimes_hitlist FOREIGN KEY (hit_id)
     REFERENCES hitlist(hit_id),
 
-    CONSTRAINT FK_commited_grad_crimes_lookup_grad_crimes FOREIGN KEY (grad_crime_id)
+    CONSTRAINT FK_committed_grad_crimes_lookup_grad_crimes FOREIGN KEY (grad_crime_id)
     REFERENCES lookup_grad_crimes (grad_crime_id)
 );
