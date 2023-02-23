@@ -18,7 +18,7 @@ create or replace view hitlist_view as
 						from public.lookup_grad_crimes lgc where lgc.grad_crime_id = cgc.grad_crime_id 
 					)
 				)
-			) from public.commited_grad_crimes cgc where cgc.hit_id = h.hit_id  
+			) from public.committed_grad_crimes cgc where cgc.hit_id = h.hit_id  
 		) as grad_crimes
 	from public.hitlist h
 	left join public.grad_information gi
