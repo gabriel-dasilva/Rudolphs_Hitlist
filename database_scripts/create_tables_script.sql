@@ -15,13 +15,13 @@ CREATE TABLE hangouts (
 
 CREATE TABLE frequent_hangouts (
     hangout_id INT NOT NULL,
-    hangout_time TIMESTAMP NOT NULL,
+    hangout_time TIME NOT NULL,
     grad_id INT NOT NULL,
 
-    CONSTRAINT FK_frequent_hangouts FOREIGN KEY(grad_id)
+    CONSTRAINT FK_frequent_hangouts_grad_information FOREIGN KEY(grad_id)
     REFERENCES grad_information (grad_id),
 
-    CONSTRAINT FK_frequent_hangouts FOREIGN KEY(hangout_id)
+    CONSTRAINT FK_frequent_hangouts_hangouts FOREIGN KEY(hangout_id)
     REFERENCES hangouts (hangout_id)
 );
 
